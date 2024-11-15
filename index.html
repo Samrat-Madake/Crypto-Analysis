@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Market Minds</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+   
+   
+<!-- 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+  </head>
+  <body>
+    <nav 
+    id="navbarr"
+      class="navbar navbar-expand-lg"
+      style="background-color: rgb(49, 47, 47)"
+      style="border-radius: 20px;"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="MarketMinds2.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          style="background-color: rgb(215, 216, 218)"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ps-5 fs-5 fw-medium">
+            <!-- 
+<div class="container text-center">
+  <div class="row">
+    <div id="one" class="col">
+      Column
+    </div>
+    <div id="two" class="col">
+      Column
+    </div>
+    <div id="three" class="col">
+      Column
+    </div>
+  </div>
+</div> -->
+
+            <li class="nav-item p-3 text-light-emphasis">
+              <a class="nav-link text-light" aria-current="page" href="#"
+                ><b>Home</b></a
+              >
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#"><b>Crypto List</b></a>
+            </li>
+            
+            <!-- <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#"><b>Blog</b></a>
+            </li> -->
+            <!-- <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#"
+                ><b>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-twitter-x"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                    />
+                  </svg>
+                  Twitter</b
+                ></a
+              >
+            </li> -->
+            <!-- <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#"
+                ><b>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="23"
+                    height="23"
+                    fill="currentColor"
+                    class="bi bi-facebook"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"
+                    />
+                  </svg>
+                  Facebook</b
+                ></a
+              >
+            </li> -->
+            <!-- <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#"
+              ><b>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="23"
+                  height="23"
+                  fill="currentColor"
+                  class="bi bi-facebook"
+                  viewBox="0 0 16 16"
+                >
+                  <path/>
+                    
+                </svg>
+               <select name="" id="About">
+                <option value="">About</option>
+      
+                <option value=""  >Research Paper</option>
+                <option value="">ppt's</option>
+               </select>
+               </b></a
+            > -->
+            <li class="nav-item p-3">
+              <a class="nav-link text-light" href="Research Paper.pdf"><b>Research Paper</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link text-light" href="PPT.pptx"><b>PPT</b></a>
+            </li>
+            <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#"><b>Contact Us</b></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="search_form">
+      <form class="d-flex p-5" role="search">
+        <input
+          class="form-control me-2 ps-2"
+          type="search"
+          placeholder=" Search token or asset"
+          aria-label="Search"
+        />
+
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+    <h1 id="abc">Why choose Market Minds</h1>
+
+    <div id="container">
+      <div class="card">
+        <img src="Ellipse1.png" class="card-img-top" alt="..." id="one" />
+        <div class="card-body">
+          <h4 class="card-title">Advance Technical Analysis</h4>
+          <p class="card-text">
+            Build your trading edge with 150+ premium indicators and 300+
+            technical analysis studies including orderflow charts , market
+            profile and volume profile tools..
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Ellipse1.png" class="card-img-top" alt="..." id="two" />
+        <div class="card-body">
+          <h4 class="card-title">Fast and Secure</h4>
+          <p class="card-text">
+            Our cryptocurrency analysis website offers fast price predictions
+            through optimizedalgorithms and ensures secure transactions with
+            robust encryption, providing users with real-time data and a safe
+            experience for informed decision-making.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="Ellipse1.png" class="card-img-top" alt="..." id="three" />
+        <div class="card-body">
+          <h4 class="card-title">Forecast</h4>
+          <p class="card-text">
+            We provide accurate forecasts by analyzing historical data and
+            market trends, helping you make informed decisions with reliable
+            predictions for future price movements.
+          </p>
+        </div>
+      </div>
+    </div>
+      
+
+  
+    <hr />
+    <div id="table_parent">
+      <table id="tablle">
+        <tr >
+          <th>Sr no</th>
+          <th>Name</th>
+          <th>Live Price</th>
+          <th>BUY</th>
+          <td>Get Analysis</td>
+          
+        </tr>
+        <tbody  >
+
+        <tr class="table_rows"  onclick="redirectToPage('btc')">
+          <td>1</td>
+          <td>
+            <img id="btc" src="Bitcoin.png" alt="" />Bitcoin
+            <span style="opacity: 0.7">BTC</span>
+          </td>
+
+          <td id="bitcoin-price">Loading...</td>
+         
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/BTC_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+          </td>
+
+          <td ><button class="btn btn-secondary">
+            <a class="analysis_btn"
+            href="btc_page.html">Click here</a>
+          </button>
+            
+            </td>
+         
+        </tr>
+
+        <tr  class="table_rows">
+          <td>2</td>
+          <td>
+            <img id="btc" src="dogecoin.png" alt="" />Dogecoin
+            <span style="opacity: 0.7">DOGE</span>
+          </td>
+          <td id="dogecoin-price">Loading...</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9"> 
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/DOGE_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+
+          </td>
+          <td ><button class="btn btn-secondary">
+            <a class="analysis_btn"
+            href="dogecoin_page.html">Click here</a>
+          </button>
+            
+            </td>
+
+          
+        </tr>
+
+        <tr  class="table_rows">
+          <td>3</td>
+          <td>
+            <img id="btc" src="Ethereum.png" alt="" />Ethereum
+            <span style="opacity: 0.7">ETH</span>
+          </td>
+          <td id="ethereum-price">Loading...</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/ETH_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+          </td>
+          <td ><button class="btn btn-secondary">
+            <a class="analysis_btn"
+            href="Eth_page.html">Click here</a>
+          </button>
+            
+            </td>
+         
+        </tr>
+
+        <tr  class="table_rows">
+          <td>4</td>
+          <td>
+            <img id="btc" src="Solana.png" alt="" />Solana
+            <span style="opacity: 0.7">SOL</span>
+          </td>
+          <td id="solana-price">Loading...</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/SOL_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+          </td>
+          <td ><button class="btn btn-secondary">
+            <a class="analysis_btn"
+            href="Sol_page.html">Click here</a>
+          </button>
+            
+            </td>
+          
+        </tr >
+
+        <tr  class="table_rows">
+          <td>5</td>
+          <td>
+            <img id="btc" src="tether.png" alt="" />Tether
+            <span style="opacity: 0.7">USDT</span>
+          </td>
+          <td id="tether-price">Loading...</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a class="link" href="https://www.binance.com/en-IN/price/tether"
+                >BUY</a
+              >
+            </button>
+          </td>
+          <td ><button class="btn btn-secondary">
+            <a class="analysis_btn"
+            href="#">Click here</a>
+          </button>
+            
+            </td>
+         
+        </tr>
+
+      </tbody>
+    
+
+      
+
+        
+
+       
+
+        <!-- <tr>
+          <td>6</td>
+          <td>
+            <img id="btc" src="shiba.png" alt="" />Shiba Inu
+            <span style="opacity: 0.7">SHIB</span>
+          </td>
+          <td>$100000</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/SHIB_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+          </td>
+
+          <td>2%</td>
+        </tr> -->
+
+        <!-- <tr>
+          <td>7</td>
+          <td>
+            <img id="btc" src="BNB.png" alt="" />BNB
+            <span style="opacity: 0.7">BNB</span>
+          </td>
+          <td>$100000</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/BNB_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+          </td>
+
+          <td>2%</td>
+        </tr>
+
+        <tr>
+          <td>8</td>
+          <td>
+            <img id="btc" src="Polygon.png" alt="" />Polygon
+            <span style="opacity: 0.7">MATIC </span>
+          </td>
+          <td>$100000</td>
+          <td>
+            <button type="button" class="btn btn-success" style="opacity: 0.9">
+              <a
+                class="link"
+                href="https://www.binance.com/en-IN/trade/POL_USDT?type=spot"
+                >BUY</a
+              >
+            </button>
+          </td> -->
+
+          <!-- <td>2%</td>
+        </tr> -->
+      </table>
+
+      
+
+      
+      <script>
+        // Map to link cryptocurrency names to their respective table row ids
+        const cryptoIds = {
+            bitcoin: 'bitcoin-price',
+            ethereum: 'ethereum-price',
+            tether: 'tether-price',
+            solana: 'solana-price',
+            dogecoin: 'dogecoin-price'
+        };
+      
+        async function fetchCryptoPrices() {
+            try {
+                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether,solana,dogecoin&vs_currencies=usd');
+                const data = await response.json();
+      
+                // Populate the second table (price table) with the fetched data
+                for (const [crypto, value] of Object.entries(data)) {
+                    const priceCellId = cryptoIds[crypto];
+                    const priceCell = document.getElementById(priceCellId);
+                    if (priceCell) {
+                        priceCell.textContent = `$${value.usd.toFixed(2)}`;
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+      
+        // Fetch prices initially and then every 60 seconds
+        fetchCryptoPrices();
+        setInterval(fetchCryptoPrices, 60000);  // Fetch every 60 seconds
+
+
+        
+    function redirectToPage(page) {
+        window.location.href = page; // Redirects to the specified page
+    }
+
+      </script>
+      
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table id="general-table">
+        <thead>
+            <tr>
+                <th>Sr No</th>
+                <th>Cryptocurrency</th>
+                <th>Other Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bitcoin</td>
+                <td>Some Info</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ethereum</td>
+                <td>Some Info</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Tether</td>
+                <td>Some Info</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Solana</td>
+                <td>Some Info</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Dogecoin</td>
+                <td>Some Info</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Second table for prices -->
+    <table id="price-table">
+        <thead>
+            <tr>
+                <th>Cryptocurrency</th>
+                <th>Price (USD)</th>
+            </tr>
+        </thead>
+        <tbody id="crypto-price-table">
+            <tr>
+                <td>Bitcoin</td>
+                <td id="bitcoin-price">Loading...</td>
+            </tr>
+            <tr>
+                <td>Ethereum</td>
+                <td id="ethereum-price">Loading...</td>
+            </tr>
+            <tr>
+                <td>Tether</td>
+                <td id="tether-price">Loading...</td>
+            </tr>
+            <tr>
+                <td>Solana</td>
+                <td id="solana-price">Loading...</td>
+            </tr>
+            <tr>
+                <td>Dogecoin</td>
+                <td id="dogecoin-price">Loading...</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+      // Map to link cryptocurrency names to their respective table row ids
+      const cryptoIds = {
+          bitcoin: 'bitcoin-price',
+          ethereum: 'ethereum-price',
+          tether: 'tether-price',
+          solana: 'solana-price',
+          dogecoin: 'dogecoin-price'
+      };
+    
+      async function fetchCryptoPrices() {
+          try {
+              const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,tether,solana,dogecoin&vs_currencies=usd');
+              const data = await response.json();
+    
+              // Populate the second table (price table) with the fetched data
+              for (const [crypto, value] of Object.entries(data)) {
+                  const priceCellId = cryptoIds[crypto];
+                  const priceCell = document.getElementById(priceCellId);
+                  if (priceCell) {
+                      priceCell.textContent = `$${value.usd.toFixed(2)}`;
+                  }
+              }
+          } catch (error) {
+              console.error('Error fetching data:', error);
+          }
+      }
+    
+      // Fetch prices initially and then every 60 seconds
+      fetchCryptoPrices();
+      setInterval(fetchCryptoPrices, 60000);  // Fetch every 60 seconds
+    </script>
+    
+    
+</body>
+</html>

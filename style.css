@@ -1,0 +1,199 @@
+ul li:hover {
+  background-color: rgba(237, 229, 229,0.3);
+  
+}
+
+/* #search{
+
+    width:1100px;
+    height: 60px;
+    margin-left: 250px;
+
+}
+    
+
+#search_btn{
+    width: 120px;
+
+} */
+
+#navbarr{
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+#search_form {
+    /* width: 1200px;
+    height: auto; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;       
+}
+#search_form>form{
+    width: 1200px;
+    height: 150px;
+}
+
+#abc{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#container{
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card{
+    border:6px solid rgb(197, 25, 25);
+    width: 600px;
+    height: 200px;
+
+
+
+
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    backdrop-filter: blur(50px); /* Blur effect */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 450px; /* Set card width */
+    text-align: center;
+    transition:transform 0.3s, box-shadow 0.1s;
+    
+}
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+#container.card p,h4{
+    text-align: center;
+}
+
+#one{
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+
+}
+#two{
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+
+
+}
+#three{
+    width: 200px;
+    height: 200px;
+    margin-left: 100px;
+
+}
+
+#table_parent{
+
+
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+    /* height: 90vh; */
+    text-align: center;
+
+    margin-top: 100px;
+
+} 
+
+.table_rows {
+    /* border: 1px solid #ccc; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .table_rows:hover {
+    transform:  translateX(4px); /* Move the card up slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a larger shadow */
+  }
+  
+
+
+#tablle{
+   
+    width: 1200px;
+    margin-top: 70px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+#tablle  td{
+    padding: 30px 10px  30px 10px;
+}
+#tablle tr {
+    padding: 30px 0px  30px 10px;
+}
+
+
+table td{
+    
+    border-bottom: 1px solid black; /* Add a line between rows */  
+}
+table th{
+    
+    border-bottom: 1px solid black; /* Add a line between rows */
+      
+}
+
+#btc{
+    width: 20px;
+    height: 23px;
+    margin-right: 5px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+#About{
+    background-color: #2f2e2e;
+    color: white;
+    font-weight:700;
+    border: #333;
+
+}
+
+
+ #crypto-table{
+   
+    width: 100px;
+    margin-top: 200px;
+    font-size: larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+} 
+#crypto-table  td{
+
+    padding: 28px 10px 35px 0px;
+
+}
+#crypto-table tr {
+
+    padding: 30px 10px 30px 0px;
+   
+}
+
+.analysis_btn{
+    text-decoration: none;
+    color: white;
+
+}
+
