@@ -17,6 +17,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
   </head>
   <body>
+    <div class="wrapper">
     <nav 
     id="navbarr"
       class="navbar navbar-expand-lg"
@@ -61,8 +62,10 @@
                 ><b>Home</b></a
               >
             </li>
-            <li class="nav-item p-3">
+<!--             <li class="nav-item p-3">
               <a class="nav-link text-light" href="#"><b>Crypto List</b></a>
+            </li> --> <li class="nav-item p-3">
+              <a class="nav-link text-light" href="#cryptolist"  id="crypto-list-btn"><b>Crypto List</b></a>
             </li>
             
             <!-- <li class="nav-item p-3">
@@ -137,9 +140,7 @@
             <li class="nav-item p-3">
               <a class="nav-link text-light" href="PPTPDF.pdf"><b>PPT</b></a>
             </li>
-            <li class="nav-item p-3">
-              <a class="nav-link text-light" href="#"><b>Contact Us</b></a>
-            </li>
+             <li class="nav-item p-3" ><a class="nav-link text-light" href="#about" id="about-us-btn">About Us</a></li>
           </ul>
         </div>
       </div>
@@ -411,11 +412,31 @@
           <!-- <td>2%</td>
         </tr> -->
       </table>
-
+       </div>
+ <footer id="footer">
+        <div class="footer-content">
+          <h3>About Us</h3>
+          <p>
+            We are a team of crypto enthusiasts dedicated to providing insights and tools 
+            to help traders make informed decisions in the cryptocurrency market.
+          </p>
+          <p>© 2024 Crypto Currency Analysis. All rights reserved.</p>
+        </div>
+      </footer>
       
 
       
       <script>
+
+        // Scroll to footer when the "About Us" button is clicked
+document.getElementById("about-us-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("crypto-list-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.getElementById("footer").scrollIntoView({ behavior: "smooth" });
+  });
         // Map to link cryptocurrency names to their respective table row ids
         const cryptoIds = {
             bitcoin: 'bitcoin-price',
